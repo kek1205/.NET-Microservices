@@ -52,5 +52,5 @@ namespace PlatformService.Controllers
 
       return CreatedAtRoute(nameof(GetPlatformById), new { id = platformModel.Id }, platformItem);
     }
-  }
+  }                                                                                                                         
 }
