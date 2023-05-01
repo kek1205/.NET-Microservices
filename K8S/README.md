@@ -24,10 +24,22 @@
 
 `kubectl rollout restart deployment platforms-depl`
 
-# Ingress nginx to apply deployment
+## Ingress nginx to apply deployment
 
 `kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.7.0/deploy/static/provider/cloud/deploy.yaml`
 
-# Get Pod by namespace
+## Get Pod by namespace
 
 `kubectl get pod --namespace=ingress-nginx`
+
+## Get Persistence claim
+
+`kubectl get pvc`
+
+## Get Storage class
+
+`kubectl get storageclass`
+
+## Create Secret key
+
+`kubectl create secret generic mssql --from-literl=SA_PASSWORD="pa55wOrd!"`
