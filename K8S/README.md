@@ -6,7 +6,7 @@
 
 ## Get Deployments
 
-`kubectrl get deployments`
+`kubectl get deployments`
 
 ## Get pods
 
@@ -14,4 +14,20 @@
 
 ## Get All Namespaces
 
-`kebutctl get namespace`
+`kubectl get namespace`
+
+## Delete an deployment
+
+`kubectl delete deployment plaforms-depl`
+
+## Restart Deployment
+
+`kubectl rollout restart deployment platforms-depl`
+
+# Ingress nginx to apply deployment
+
+`kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.7.0/deploy/static/provider/cloud/deploy.yaml`
+
+# Get Pod by namespace
+
+`kubectl get pod --namespace=ingress-nginx`
