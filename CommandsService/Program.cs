@@ -1,4 +1,5 @@
 using CommandsService.Data;
+using CommandsService.EventProcessing;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +10,7 @@ builder.Services.AddScoped<ICommandRepo, CommandRepo>();
 // Add services to the container.
 builder.Services.AddControllers();
 
+builder.Services.AddSingleton<IEventProcessor, EventProcessor>();
 //Auto Mapper
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
