@@ -28,6 +28,10 @@
 
 `kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.7.0/deploy/static/provider/cloud/deploy.yaml`
 
+## Delete all pod with namespace
+
+`kubectl get pod --namespace=ingress-nginx`
+
 ## Get Pod by namespace
 
 `kubectl get pod --namespace=ingress-nginx`
@@ -40,6 +44,6 @@
 
 `kubectl get storageclass`
 
-## Create Secret key
+## Create Secret key for Mssql
 
-`kubectl create secret generic mssql --from-literl=SA_PASSWORD="pa55wOrd!"`
+`kubectl create secret generic mssql --from-literal=SA_PASSWORD="pa55wOrd!"`

@@ -63,9 +63,11 @@ namespace PlatformService.AsyncDataServices
     private void SendMessage(string message)
     {
       var body = Encoding.UTF8.GetBytes(message);
+      Console.WriteLine($"--> Debug SendMessage(): {message}");
+      Console.WriteLine($"--> Debug RabbitMQExchange(): {_configuration["RabbitMQExchange"]}");
 
       _channel.BasicPublish(exchange: _configuration["RabbitMQExchange"],
-        routingKey: string.Empty,
+        routingKey: "",
         basicProperties: null,
         body: body);
 

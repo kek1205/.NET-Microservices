@@ -8,6 +8,7 @@ using PlatformService.Data;
 using PlatformService.Dtos;
 using PlatformService.Models;
 using PlatformService.SyncDataServices;
+using PlatformService.SyncDataServices.Http;
 
 namespace PlatformService.Controllers
 {
@@ -71,6 +72,7 @@ namespace PlatformService.Controllers
       {
         Console.WriteLine($"--> Could not send synchronously: {ex.Message}");
       }
+
       //Async message
       try
       {
