@@ -51,4 +51,6 @@ foreach (var address in addressFeature.Addresses)
   Console.WriteLine("Kestrel is listening on address: " + address);
 }
 
+PrepDb.PrepPopulation(app);
+
 app.WaitForShutdown();
